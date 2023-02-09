@@ -1,0 +1,7 @@
+#http://localhost:8080/tfm/requesttemplate/create
+#Request Template:  
+request_template_type: ESF-XSD
+request_template_filepath: '/opt/hpe-tfm/xsd/schema0.xsd'
+rules:  
+- { key: "binding", value: '/opt/hpe-tfm/xsd/global.xjb' } 
+- { key: "targetdir", value: '/opt/hpe-tfm/xsd/generated/' } 

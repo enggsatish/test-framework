@@ -1,0 +1,139 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hpe.tfm</groupId>
+	<artifactId>com.hpe.tfm</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>HPE Test framework</name>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>hpe.tfm.request.mgmt</module>
+		<module>hpe.tfm.response.mgmt</module>
+		<module>hpe.tfm.testdata.mgmt</module>
+		<module>hpe.tfm.adapter.mgmt</module>
+		<module>hpe.tfm.assertion.mgmt</module>
+		<module>hpe.tfm.report.mgmt</module>
+		<module>hpe.tfm.dao</module>
+		<module>hpe.tfm.restservice</module>
+	</modules>
+
+	<!-- Properties value -->
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<citrus.version>3.0.0-M1</citrus.version>
+		<slf4j.version>1.7.30</slf4j.version>
+		<project.version>1.0.0</project.version>
+		<log4j2.version>2.13.3</log4j2.version>
+		<testng.version>7.1.0</testng.version>
+		<junit.version>4.13</junit.version>
+		<junit.jupiter.version>5.6.0</junit.jupiter.version>
+		<system.under.test.mode>embedded</system.under.test.mode>
+		<spring.version>5.2.4.RELEASE</spring.version>
+		<spring.boot.version>2.2.6.RELEASE</spring.boot.version>
+		<jackson.version>2.10.3</jackson.version>
+		<spring.kafka.version>2.4.3.RELEASE</spring.kafka.version>
+		<activemq.version>5.15.11</activemq.version>
+		<jaxb.version>2.3.0</jaxb.version>
+	</properties>
+
+	<!-- Dependicies -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-starter-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.hpe.tfm</groupId>
+				<artifactId>hpe.tfm.dao</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+	<build>
+		<!-- <finalName>hpetfm</finalName> -->
+		<plugins>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jar-plugin</artifactId> 
+				<configuration> <archive> <manifest> <addClasspath>true</addClasspath> </manifest> 
+				</archive> </configuration> </plugin> -->
+			<!-- download source code in Eclipse, best practice -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.10</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<!-- <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>C:/Users/skumar19/OneDrive - Hewlett Packard Enterprise/EclipseWorkspace/test-frame/com.hpe.tfm/lib</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin> -->
+			<!-- Set a JDK compiler level -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring.boot.version}</version>
+				<configuration>
+					<skip>true</skip>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

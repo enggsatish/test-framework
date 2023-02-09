@@ -1,0 +1,13 @@
+hpe\tfm\adapter\mgmt\jdbc\TfmJdbcAdapter.class
+hpe\tfm\adapter\mgmt\TfmAdapter.class
+hpe\tfm\adapter\mgmt\ldap\impl\TfmLdapAdapterImpl.class
+hpe\tfm\adapter\mgmt\http\TfmHttpAdapter.class
+hpe\tfm\adapter\mgmt\jms\impl\TfmJmsQueueAdapaterImpl.class
+hpe\tfm\adapter\mgmt\ldap\TfmLdapAdapter.class
+hpe\tfm\adapter\mgmt\TfmGenericAdapter.class
+hpe\tfm\adapter\mgmt\TfmAdaterFactory.class
+hpe\tfm\adapter\mgmt\util\TfmAdapterUtil.class
+hpe\tfm\adapter\mgmt\jms\impl\TfmJmsTopicAdapaterImpl.class
+hpe\tfm\adapter\mgmt\jdbc\impl\TfmJdbcAdapterImpl.class
+hpe\tfm\adapter\mgmt\http\impl\TfmHttpAdapterImpl.class
+hpe\tfm\adapter\mgmt\jms\TfmJmsAdapater.class

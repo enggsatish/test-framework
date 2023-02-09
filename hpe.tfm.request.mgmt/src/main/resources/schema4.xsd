@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://cia.services.cablelabs.com/schemas/v1/CIALib"
+           attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://cia.services.cablelabs.com/schemas/v1/CIALib"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CustomerAccountInteractionRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0"
+                    name="CustomerAccountRef">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"
+                          name="AccountId"
+                          type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusinessInteractionLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0"
+                    name="AmericanPropertyAddress">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"
+                          name="AmericanPropertyAddressProperties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"
+                                name="AddressId"
+                                type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Action"
+              type="xs:string" />
+  <xs:element name="ResourceFacingService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0"
+                    name="ServiceCharacteristics">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"
+                          maxOccurs="unbounded"
+                          name="Characteristic">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"
+                                name="CharacteristicName"
+                                type="xs:string" />
+                    <xs:element minOccurs="0"
+                                name="CharacteristicCategory">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0"
+                                      name="CategoryName"
+                                      type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                                name="CharacteristicValue">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0"
+                                      name="Value"
+                                      type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0"
+                    name="ResourceFacingServiceProperties">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"
+                          name="ServiceId"
+                          type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0"
+                    name="ResourceFacingServiceSpec">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"
+                          name="ServiceSpecClassification">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"
+                                name="ServiceSpecClassificationName"
+                                type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0"
+                          name="ResourceFacingServiceSpecProperties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"
+                                name="ServiceSpecId"
+                                type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0"
+                    name="ResourceRefs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"
+                          name="ResourceRef">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"
+                                name="ObjectId"
+                                type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

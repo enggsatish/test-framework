@@ -1,0 +1,10 @@
+#test step service
+#http://localhost:8080/tfm/teststep/service
+#http://localhost:8080/tfm/teststep/template/getall
+#http://localhost:8080/tfm/teststep/1
+#http://localhost:8080/tfm/teststep/step-hsdata-add-1
+name: step-hsdata-add-1
+testcasename: video-service-test-case
+templatename: hsdata-template-1
+properties: 
+  - { key: "accountid", value: '01280935780' }

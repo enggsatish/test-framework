@@ -1,0 +1,8 @@
+#Request test Suite service
+#http://localhost:8080/tfm/testcase/service
+name: video-service-test-case
+suitename: video-service-suite
+description: "add video services"
+properties: 
+  - { key: "accountid", value: '01280935780' }
+  - { key: "addressid", value: '2992898' }

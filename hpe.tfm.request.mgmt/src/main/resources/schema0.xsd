@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="unqualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="schema1.xsd"
+             namespace="http://cia.services.shaw.com/schemas/ServiceActivation/v1" />
+  <xs:element name="Message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0"
+                    name="Header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"
+                          name="ENVIRONMENTNAME" />
+              <xs:element minOccurs="0"
+                          name="X_SHAW_ORIGINATING_USER_ID"
+                          type="xs:string" />
+              <xs:element minOccurs="0"
+                          name="X_SHAW_TRANSACTION_ID"
+                          type="xs:string" />
+              <xs:element minOccurs="0"
+                          name="X_SHAW_SERVICE_ORCHESTRATION_TRANSACTION_ID" />
+              <xs:element minOccurs="0"
+                          name="JMSCorrelationID" />
+              <xs:element minOccurs="0"
+                          name="JMSReplyTo" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0"
+                    name="Body">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" xmlns:q1="http://cia.services.shaw.com/schemas/ServiceActivation/v1"
+                          ref="q1:ServiceActivationRequest" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

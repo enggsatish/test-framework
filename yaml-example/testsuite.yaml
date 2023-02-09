@@ -1,0 +1,9 @@
+#Request test Suite service
+#http://localhost:8080/tfm/testsuite/service
+name: video-service-suite
+description: "add multiple vide service"
+properties: 
+  - { key: "userid", value: 'SJRB\proc_oe2' }
+  - { key: "tranid", value: '37656451' }
+  - { key: "mid", value: '2c3f7a27-2bb1-42d1-a5ef-40ab79ded6d8' }
+  - { key: "msgtime", value: '2020-06-04T22:27:40.953Z' }

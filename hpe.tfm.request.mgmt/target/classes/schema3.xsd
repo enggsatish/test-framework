@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://cia.services.cablelabs.com/schemas/v1/ServiceOrder"
+           attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://cia.services.cablelabs.com/schemas/v1/ServiceOrder"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="schema4.xsd"
+             namespace="http://cia.services.cablelabs.com/schemas/v1/CIALib" />
+  <xs:element name="ServiceOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0"
+                    xmlns:q1="http://cia.services.cablelabs.com/schemas/v1/CIALib"
+                    ref="q1:CustomerAccountInteractionRole" />
+        <xs:element minOccurs="0"
+                    name="ServiceOrderProperties" />
+        <xs:element minOccurs="0"
+                    name="ServiceOrderItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"
+                          maxOccurs="unbounded"
+                          name="ServiceOrderItem">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"
+                                xmlns:q2="http://cia.services.cablelabs.com/schemas/v1/CIALib"
+                                ref="q2:BusinessInteractionLocation" />
+                    <xs:element minOccurs="0"
+                                name="ServiceOrderItemProperties">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0"
+                                      xmlns:q3="http://cia.services.cablelabs.com/schemas/v1/CIALib"
+                                      ref="q3:Action" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0"
+                                xmlns:q4="http://cia.services.cablelabs.com/schemas/v1/CIALib"
+                                ref="q4:ResourceFacingService" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

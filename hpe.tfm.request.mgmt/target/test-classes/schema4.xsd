@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://cia.services.cablelabs.com/schemas/v1/CIALib" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://cia.services.cablelabs.com/schemas/v1/CIALib" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CustomerAccountInteractionRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CustomerAccountRef">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccountId" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusinessInteractionLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AmericanPropertyAddress">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AmericanPropertyAddressProperties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="AddressId" type="xs:unsignedInt" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Action" type="xs:string" />
+  <xs:element name="ResourceFacingService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceCharacteristics">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Characteristic">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CharacteristicName" type="xs:string" />
+                    <xs:element name="CharacteristicCategory">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CategoryName" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CharacteristicValue">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Value" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ResourceFacingServiceProperties">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceId" type="xs:unsignedLong" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ResourceFacingServiceSpec">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ServiceSpecClassification">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ServiceSpecClassificationName" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ResourceFacingServiceSpecProperties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ServiceSpecId" type="xs:unsignedShort" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="ResourceRefs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ResourceRef">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ObjectId" type="xs:unsignedLong" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

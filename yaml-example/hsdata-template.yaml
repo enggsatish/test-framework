@@ -1,0 +1,40 @@
+#Request test step template 
+#http://localhost:8080/tfm/teststep/template/service
+name: "hsdata-template"
+description: set xb6 with hsdata service with entitlments
+reqtemplate: 1
+restemplate: 1
+applicationid: 1 
+executionpriority: 1
+inputparam:
+ tcproperties: 
+ - { name: "OriginatingUser", type: "string", nodevalue: "SJRB\proc_oe2" }
+ - { name: "OriginatingSystem", type: "string", nodevalue: "http://oeservice.oss.prd" }
+ - { name: "CorrelationId", type: "string", nodevalue: "2c3f7a27-2bb1-42d1-a5ef-40ab79ded6d8" }
+ accountnumber: 54555555
+ userid: 'SJRB\proc_oe2'
+ tranid: '37656451'
+ mid: '2c3f7a27-2bb1-42d1-1234'
+ msgtime: '2020-06-04T22:27:40.953'
+ soitems: 
+ - action: SET
+   addressid: 272272
+   serviceid: 9157420325113148574
+   servicespecclassificationname: Device
+   servicespecid: 1004
+   characteristics: 
+   - characteristicname: SerialNumber
+     categoryname: DeviceInfo
+     value: 251173104429
+ - action: SET
+   addressid: 272272
+   characteristics: 
+   - characteristicname: ESCatalogueServiceId
+     categoryname: Handle
+     value: 55
+   - characteristicname: ESCatalogueServiceId
+     categoryname: Handle
+     value: 990
+   serviceid: 9157420325113148574
+   servicespecclassificationname: HighSpeedData
+   servicespecid: 108
